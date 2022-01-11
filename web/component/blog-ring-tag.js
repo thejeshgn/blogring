@@ -2,7 +2,9 @@ const template = document.createElement('template');
 
 template.innerHTML = `
         <div id='blogcard'>
-            I recommend <a target='_blank' id='link' href=''></a>. <span id="description"></span> &nbsp;<p id="next_post" title='Get New Blog' style='cursor: pointer;'>♻️</p>
+            I recommend <a target='_blank' id='link' href=''></a>. <span id="description"></span> 
+            &nbsp;<p id="next_post" title='Get New Blog' style='cursor: pointer;'>Click ♻️ for random blog.</p>
+        
         </div>
         `
 
@@ -19,11 +21,17 @@ class BlogRing extends HTMLElement {
 
     async connectedCallback() {
         this.shadowRoot.appendChild(template.content.cloneNode(true));
+
+        //Get the metatadata of the blogring in sync
+        //Most important one is total number of blogs
+        //So then we can get one of the random blog.
         await this.getMetaData();        
-        this.getRandomPost();
+
+        // Get a random Post and 
+        this.getRandomBlog();
 
         this.shadowRoot.querySelector('#next_post').addEventListener("click", (event) => {
-            this.getRandomPost()
+            this.getRandomBlog()
         });
     }
 
@@ -38,7 +46,7 @@ class BlogRing extends HTMLElement {
     }
 
 
-    getRandomPost() {
+    getRandomBlog() {
         let random_blog = Math.floor((Math.random() * this.totalPosts) + 1)
         console.log("random_blog",random_blog)
         return new Promise((res, rej) => {
