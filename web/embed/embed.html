@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>blogring</title>
+    <head>
+      <style type="text/css">
+          body {
+            font-family: "Noto Sans",'Noto Sans Kannada', Arial, sans-serif;
+            color: #333;
+          }
+
+          a {
+            color: #3b8dbd;
+          }
+
+      </style>
+      <script type="text/javascript">
+          var api_endpoint = "https://data.thejeshgn.com/blogring/";
+          var max_blogs = 10;
+
+          const meta_request = async () => {
+            const response = await fetch(api_endpoint+"meta");
+            const meta = await response.json();
+            max_blogs = meta["total"]
+          }
+
+          function embed_blogring(data){
+            content = "I recommend <a target='_blank' href='" + data["url"] + "'>" + data["title"] + "</a>. ";
+            content = content + data["description"];
+            content = content + "&nbsp;<span onclick ='refresh_blogring()' title='Get New Blog' style='cursor: pointer;'>♻️</span>"
+            document.getElementById("blog_ring").innerHTML = content;
+          }
+          
+
+          function refresh_blogring(){
+            var random_blog = Math.floor( (Math.random() * max_blogs) + 1) ;
+            fetch(api_endpoint+random_blog)
+            .then(response => response.json())
+            .then(data => embed_blogring(data));
+          }
+
+          function initialize(){
+            meta_request();
+            refresh_blogring();
+          }
+
+      </script>
+  </head>
+  <body>
+    <div id="blog_ring"> </div>
+  </body>
+  <script type="text/javascript">
+    initialize();
+  </script>
+</html>
