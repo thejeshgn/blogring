@@ -35,14 +35,16 @@
           
 
           function refresh_blogring(){
+            console.log("max_blogs", max_blogs);
             var random_blog = Math.floor( (Math.random() * max_blogs) + 1) ;
+            console.log("random_blog", random_blog);
             fetch(api_endpoint+random_blog)
             .then(response => response.json())
             .then(data => embed_blogring(data));
           }
 
-          function initialize(){
-            meta_request();
+          async function initialize(){
+            await meta_request();
             refresh_blogring();
           }
 
