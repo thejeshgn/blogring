@@ -1,5 +1,5 @@
 {
-    "total_rows": 30,
+    "total_rows": 40,
     "offset": 0,
     "rows":
     [
@@ -237,22 +237,22 @@
             "key": "19",
             "value":
             {
-                "rev": "1-bcb8435cfbb86bc75f6c8ef529a16d91"
+                "rev": "2-3ae74ed654a95542a7be56a9f2ae5dfe"
             },
             "doc":
             {
                 "_id": "19",
-                "_rev": "1-bcb8435cfbb86bc75f6c8ef529a16d91",
-                "title": "Jon Udell",
-                "url": "https://blog.jonudell.net/",
-                "feed": "https://blog.jonudell.net/feed/",
+                "_rev": "2-3ae74ed654a95542a7be56a9f2ae5dfe",
+                "title": "Peter Rukavina",
+                "url": "https://ruk.ca/",
+                "feed": "https://ruk.ca/rss/feedburner.xml",
                 "tags":
                 [
                     "Web",
-                    "Internet",
-                    "Technology"
+                    "Developer",
+                    "Print"
                 ],
-                "description": "Jon writes about much exciting stuff about the internet, web, and general technology. I started reading his blog primarily for his duct tape experiments with various technologies."
+                "description": "Peter blogs about everything. I love his posts on life, printing technology, web, internet and generall everything about life."
             }
         },
         {
@@ -490,6 +490,29 @@
             }
         },
         {
+            "id": "29",
+            "key": "29",
+            "value":
+            {
+                "rev": "1-a7dc690fc0e8cc478743cbd13ed5bdef"
+            },
+            "doc":
+            {
+                "_id": "29",
+                "_rev": "1-a7dc690fc0e8cc478743cbd13ed5bdef",
+                "title": "Matt Webb",
+                "url": "https://interconnected.org/home/",
+                "feed": "https://interconnected.org/home/feed",
+                "tags":
+                [
+                    "Technology",
+                    "Design",
+                    "Product"
+                ],
+                "description": "By his own words, Matt uses his blog to speculate about the future of technology, design, and society. He has been blogging since 2000. I have been reading it may be since 2010."
+            }
+        },
+        {
             "id": "3",
             "key": "3",
             "value":
@@ -510,6 +533,190 @@
                     "Web"
                 ],
                 "description": "Simon writes about developing open-source software, Python, Data, etc. He writes very regularly, and I love reading the updates on his work.."
+            }
+        },
+        {
+            "id": "30",
+            "key": "30",
+            "value":
+            {
+                "rev": "1-2c59443b86450a67464903edb16eac95"
+            },
+            "doc":
+            {
+                "_id": "30",
+                "_rev": "1-2c59443b86450a67464903edb16eac95",
+                "title": "Tobias Revell",
+                "url": "https://blog.tobiasrevell.com/",
+                "feed": "https://blog.tobiasrevell.com/feed/",
+                "tags":
+                [
+                    "Technology",
+                    "Web",
+                    "3D"
+                ],
+                "description": "Tobias blogs about speculative design, Web, Social Networks, 3D design etc. I read him to get inspired."
+            }
+        },
+        {
+            "id": "31",
+            "key": "31",
+            "value":
+            {
+                "rev": "1-39a84ab34eb3b28279262ec139832f04"
+            },
+            "doc":
+            {
+                "_id": "31",
+                "_rev": "1-39a84ab34eb3b28279262ec139832f04",
+                "title": "Matt Button",
+                "url": "https://www.mattbutton.com/",
+                "feed": "https://www.mattbutton.com/index.xml",
+                "tags":
+                [
+                    "Technology",
+                    "Web",
+                    "Software Engineering"
+                ],
+                "description": "Matt blogs about everything I am interested in, Software Engineering, Flask, Web Development etc"
+            }
+        },
+        {
+            "id": "32",
+            "key": "32",
+            "value":
+            {
+                "rev": "1-ff7a95e9f0bad5efe1ad86c9e4eadeab"
+            },
+            "doc":
+            {
+                "_id": "32",
+                "_rev": "1-ff7a95e9f0bad5efe1ad86c9e4eadeab",
+                "title": "Jim Nielsen",
+                "url": "https://blog.jim-nielsen.com/",
+                "feed": "https://blog.jim-nielsen.com/feed.xml",
+                "tags":
+                [
+                    "Technology",
+                    "Books",
+                    "Web"
+                ],
+                "description": "Jim blogs about books, software engineering, We, Web Components, Web Development etc. I also like his blogs on Open Web, Indie web etc "
+            }
+        },
+        {
+            "id": "33",
+            "key": "33",
+            "value":
+            {
+                "rev": "1-13ef755f68ba65a253a916b6e8a540f7"
+            },
+            "doc":
+            {
+                "_id": "33",
+                "_rev": "1-13ef755f68ba65a253a916b6e8a540f7",
+                "title": "Lea Verou",
+                "url": "https://lea.verou.me",
+                "feed": "https://lea.verou.me",
+                "tags":
+                [
+                    "CSS",
+                    "Web",
+                    "Web Standards"
+                ],
+                "description": "I follow Lea's blog for Web Standards and to learn CSS. She blogs often and inspires me to build things with web technologies. "
+            }
+        },
+        {
+            "id": "34",
+            "key": "34",
+            "value":
+            {
+                "rev": "2-fd581dd7627a7998824a6d8173cac414"
+            },
+            "doc":
+            {
+                "_id": "34",
+                "_rev": "2-fd581dd7627a7998824a6d8173cac414",
+                "title": "Lizbeth Poirier",
+                "url": "https://ritualdust.com/",
+                "feed": "http://ritualdust.com/index.xml",
+                "tags":
+                [
+                    "Trans",
+                    "Web",
+                    "Design"
+                ],
+                "description": "Lizbeth is an artist, designer and illustrator. Lizbeth is also goth druid, musician and craftsperson. I like the design of the website and blog."
+            }
+        },
+        {
+            "id": "35",
+            "key": "35",
+            "value":
+            {
+                "rev": "2-393051a0e2a6a20dff3289ac7223d0b3"
+            },
+            "doc":
+            {
+                "_id": "35",
+                "_rev": "2-393051a0e2a6a20dff3289ac7223d0b3",
+                "title": "Lucy Bellwood",
+                "url": "https://lucybellwood.com/blog/",
+                "feed": "https://lucybellwood.com/blog/feed/",
+                "tags":
+                [
+                    "Comics",
+                    "Web",
+                    "Cartoon"
+                ],
+                "description": "Lucy is an Cartoonist. I like the way she covers everything using cartoons. Her blog covers everything about her life and work"
+            }
+        },
+        {
+            "id": "36",
+            "key": "36",
+            "value":
+            {
+                "rev": "2-3294a3a85119b8e33114c80ed41c4a27"
+            },
+            "doc":
+            {
+                "_id": "36",
+                "_rev": "2-3294a3a85119b8e33114c80ed41c4a27",
+                "title": "Winnie Lim",
+                "url": "https://winnielim.org/",
+                "feed": "https://winnielim.org/feed/",
+                "tags":
+                [
+                    "Internet",
+                    "Web",
+                    "Digital Garden"
+                ],
+                "description": "Winnie Lim is a designer. Winnie Lim covers everything about blogging, writing online, digital gardening, learning in public etc. There is something to learn in every post."
+            }
+        },
+        {
+            "id": "37",
+            "key": "37",
+            "value":
+            {
+                "rev": "1-0d7f9ec8b6a31dbaa19b1439b43c7409"
+            },
+            "doc":
+            {
+                "_id": "37",
+                "_rev": "1-0d7f9ec8b6a31dbaa19b1439b43c7409",
+                "title": "Winnie Lim",
+                "url": "https://www.gyford.com",
+                "feed": "https://www.gyford.com/phil/feeds/everything/rss/",
+                "tags":
+                [
+                    "Internet",
+                    "Web",
+                    "Digital Garden"
+                ],
+                "description": "Phil makes things on Internet and he is from Herefordshire, in the UK. I love his weekly updates, his pciture posts and generally everything he does on internet"
             }
         },
         {
@@ -664,17 +871,38 @@
             }
         },
         {
+            "id": "_design/listing",
+            "key": "_design/listing",
+            "value":
+            {
+                "rev": "2-933037c26251e07593c9eb14df6744d3"
+            },
+            "doc":
+            {
+                "_id": "_design/listing",
+                "_rev": "2-933037c26251e07593c9eb14df6744d3",
+                "views":
+                {
+                    "urls":
+                    {
+                        "map": "function (doc) {\n  if(doc.url){\n    emit(doc._id, doc.url);  \n  }\n}"
+                    }
+                },
+                "language": "javascript"
+            }
+        },
+        {
             "id": "meta",
             "key": "meta",
             "value":
             {
-                "rev": "17-cc07a605b54a5692bbfebcc7a80cc0e5"
+                "rev": "25-49c2085934763ce31111d7ba6123babd"
             },
             "doc":
             {
                 "_id": "meta",
-                "_rev": "17-cc07a605b54a5692bbfebcc7a80cc0e5",
-                "total": 28,
+                "_rev": "25-49c2085934763ce31111d7ba6123babd",
+                "total": 37,
                 "last_upadated_at": "2021-1-20T18:51:54.57+05:30 ",
                 "_attachments":
                 {

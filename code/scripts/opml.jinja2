@@ -1,0 +1,17 @@
+<opml version="2.0">
+<head>
+<title>Blogring | Thejesh GN </title>
+<dateCreated></dateCreated>
+<dateModified></dateModified>
+<ownerName>Thejesh GN</ownerName>
+</head>
+<body>
+    <outline text="Blogring" title="Blogring of Thejesh GN">
+    {%- for item in rows -%}
+    {% if item['doc']['feed'] %}
+    <outline title="{{item['doc']['title']}}" xmlUrl="{{item['doc']['feed']}}" htmlUrl="{{item['doc']['url']}}" type="rss" />
+    {%- endif -%}
+    {%- endfor -%}
+    </outline>
+</body>
+</opml>
