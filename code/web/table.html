@@ -1,0 +1,87 @@
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="https://lib.thejeshgn.com/lib_files/datatable/media/css/jquery.dataTables.min.css">
+  <script src="https://lib.thejeshgn.com/lib_files/datatable/media/js/jquery.js"></script>
+  <script src="https://lib.thejeshgn.com/lib_files/datatable/media/js/jquery.dataTables.min.js"></script>
+</head>
+<body>
+  <table id="blogring_list" class="display" cellspacing="0" width="100%">
+          <thead>
+              <tr>
+                  <th>ID</th>
+                  <th>Title</th>
+                  <th>URL</th>
+                  <th>Feed</th>
+                  <th>Tags</th>
+              </tr>
+          </thead>
+          <tfoot>
+              <tr>
+                  <th>ID</th>
+                  <th>Title</th>
+                  <th>URL</th>
+                  <th>Feed</th>
+                  <th>Tags</th>
+              </tr>
+          </tfoot>
+      </table>
+</body>
+<script>
+$(document).ready(function() {
+    var table = $('#blogring_list').DataTable({
+        "pageLength": 10,
+        "ajax": {
+            "url": "https://data.thejeshgn.com/blogring/_design/listing/_view/title",
+            "dataSrc": function(json) {
+                return json.rows.map(row => row.value);
+            }
+        },
+        "columns": [
+            { "data": "_id", "title": "ID" }, // First column with _id
+            { "data": "title", "title": "Title" },
+            { 
+                "data": "url",
+                "title": "URL",
+                "render": function(data, type, row) {
+                    return `<a href="${data}" target="_blank">${data}</a>`;
+                }
+            },
+            { 
+                "data": "feed",
+                "title": "Feed",
+                "render": function(data, type, row) {
+                    return `<a href="${data}" target="_blank">Feed</a>`;
+                }
+            },
+            { "data": "tags", "title": "Tags" }
+        ],
+        "order": [[0, 'asc']],
+        "columnDefs": [
+            { "targets": [2, 3], "orderable": false } // Disable sorting for URL and Feed columns
+        ]
+    });
+
+    // Function to format the expanded row
+    function format(d) {
+        return `<div style="padding:10px;">
+                    <strong>Description:</strong> ${d.description ? d.description : "No description available"}
+                </div>`;
+    }
+
+    // Add event listener for row click to expand
+    $('#blogring_list tbody').on('click', 'tr', function () {
+        var tr = $(this);
+        var row = table.row(tr);
+
+        if (row.child.isShown()) {
+            row.child.hide();
+            tr.removeClass('shown');
+        } else {
+            row.child(format(row.data())).show();
+            tr.addClass('shown');
+        }
+    });
+});
+
+</script>
+</html>
